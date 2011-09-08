@@ -6,9 +6,9 @@ set -o errtrace
 set -o errexit
 set -o pipefail
 
-log()  { printf "$*\n" ; return $? ;  }
+log()  { printf " ------------- $* ------------- \n" ; return $? ;  }
 
-fail() { log "\nERROR: $*\n" ; exit 1 ; }
+fail() { log "\n !!!!!!!!!!!!!! \n ERROR: $*\n !!!!!!!!!!!!!! \n" ; exit 1 ; }
 
 create_home() {
     ievms_home="${HOME}/.ievms"
@@ -173,7 +173,7 @@ create_home
 check_virtualbox
 check_unrar
 
-all_versions="7 8 9"
+all_versions="6 7 8 9"
 for ver in ${IEVMS_VERSIONS:-$all_versions}
 do
     log "Building IE${ver} VM"
