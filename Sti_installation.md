@@ -118,3 +118,22 @@ Since the VMs are not "Registered" like Windows requires, we may run into this i
 >
 
 We may need to deal with that later, but if worse comes to work we can just re-install the script.
+
+## Metrics
+
+Size of VB installations (**with** snapshots of states saved for quick load)
+* IE 7 - 1.99GB
+* IE 8 - 1.36GB
+* IE 9 - 2.23GB
+
+VB Application - 221MB
+
+Size of VHDs (shored in `~/.ievms/vhds`): 
+(**Note** your can delete these, I chose not to in case I ever wanted to reinstall them quickly)
+
+```bash
+~/.ievms% du -sh                   
+ 46G	.
+```
+
+So the total size of full installation (if you remove .vhds): 5.8GB
